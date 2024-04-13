@@ -8,4 +8,4 @@ gdown
 pillow==6.2.2
 gradio
 gunicorn==21.2.0
-pip install -r requirements.txt
+Flask>=1.1.2, <2.0
