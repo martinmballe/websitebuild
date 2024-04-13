@@ -10,4 +10,5 @@ gunicorn==21.2.0
 Flask>=2.0
 Jinja2>=3.0
 MarkupSafe>=2.0
+gunicorn
 
