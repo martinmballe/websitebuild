@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #45607e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+  }
+  
+  /* About Page */
+  
+  .about-image img {
+    max-width: 40%;
+  }
+ /* General Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders between cells are merged */
+  margin-bottom: 20px; /* Adds space below the table */
+}
+
+th, td {
+  border: 1px solid #ccc; /* Adds a light grey border around table cells */
+  padding: 8px; /* Adds space inside cells */
+  text-align: left; /* Aligns text to the left */
+  color: #333; /* Dark grey text color for readability */
+}
+
+th {
+  background-color: #f9f9f9; /* Light background color for table headers */
+  color: #333; /* Dark text color for headers */
+}
+
+/* Enhance the appearance with some padding and spacing */
+table {
+  margin-top: 20px;
+  border-spacing: 0; /* Removes spacing between borders */
+}
+
+/* Specific styles for different table sections if needed */
+table thead th {
+  background-color: #45607e; /* Adjust to match your color theme */
+  color: white;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f4f4f4; /* Zebra striping for rows */
+}
+
+table tbody tr:hover {
+  background-color: #e2e2e2; /* Hover effect for rows */
+}
+
+  
+  
+  .graph {
+    text-align: center;
+  }
+  .graph img {
+    max-width: 50%;
+    text-align: center;
+  }
+  #densityMap {
+    width: 50%; /* Adjust this to make the image larger or smaller */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin: 20px 0 20px 0px; /* Centers the image horizontally and adds margin */
+}
+
+
+/*------------ contact us page -------------*/
+
+.location {
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+}
+.location iframe {
+  width: 100%;
+}
+.contact-us {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  font-family: "Mate SC", serif;
+}
+
+.contact-col {
+  display: inline-block;
+  width: 50%;
+  margin: 0 20px 20px;
+  vertical-align: top;
+}
+
+.contact-col div {
+  margin-bottom: 20px;
+}
+
+.contact-col div .fa {
+  font-size: 16px;
+  color: #3b5998;
+}
+
+.contact-col div p {
+  margin: 0;
+  font-size: small;
+}
+
+.contact-col div h5 {
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.contact-col button {
+  height: 30px;
+  background-color: #3b5998;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-col button:hover {
+  background-color: #2d4373;
+}
+
+/* Social media icons */
+.social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #3b5998;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #2d4373;
+}
+
+.social-icons i {
+  font-size: 16px;
+}
+
+.danbod {
+  text-align: center;
+}
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Counting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>People Counting</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Counter</a></li>
+                <li><a href="{{ url_for('data') }}">Data</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about_me') }}">About me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Upload an Image to Count People</h2>
+            <p>Select an image to count people:</p>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="imageInput" name="image" accept="image/*">
+                <button type="button" id="uploadButton">Count</button>
+            </form>
+            <div id="imagePreview"></div>
+            <p id="loadingMessage" style="color: red;"></p>  <!-- Loading message will appear here -->
+            <p id="jokePartOne" style="display: none;">Good thing I'm counting people, and not sheep.</p>
+            <p id="jokePartTwo" style="display: none;">Then I would be falling asleep 🐑💤</p>
+            <p id="peopleCount"></p>
+            <img id="densityMap" style="display:none;" alt="Density Map">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 People Counter</p>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            function previewFile() {
+                var file = $('#imageInput')[0].files[0];
+                var reader = new FileReader();
+                
+                reader.onloadend = function() {
+                    $('#imagePreview').html('<img src="' + reader.result + '" style="width: 50%;"/>');
+                };
+                
+                if (file) {
+                    reader.readAsDataURL(file);
+                } else {
+                    $('#imagePreview').html('');  // Clear preview if no file selected
+                }
+            }
+            
+            $('#imageInput').change(previewFile);
+            
+            $('#uploadButton').click(function() {
+                var file = $('#imageInput')[0].files[0]; // Get the selected file
+                if (!file) {
+                    alert("Please select an image file to count.");
+                    return; // Exit the function if no file is selected
+                }
+                
+                var formData = new FormData($('#uploadForm')[0]);
+                $('#loadingMessage').text('Counting');  // Set initial text without dots
+                
+                var dotCount = 0;
+                var loadingInterval = setInterval(function() {
+                    dotCount = (dotCount % 3) + 1;
+                    $('#loadingMessage').text('Counting' + '.'.repeat(dotCount));
+                }, 500); // Update every 500 milliseconds
+        
+                // Start jokes 1 second after counting starts
+                setTimeout(function() {
+                    $('#jokePartOne').show().delay(6000).fadeOut(function() {
+                        $('#jokePartTwo').show().delay(5000).fadeOut();
+                    });
+                }, 7000);
+        
+                $.ajax({
+                    url: '/upload',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        clearInterval(loadingInterval); // Stop the loading message
+                        $('#loadingMessage').text('');  // Clear the message
+                        $('#densityMap').attr('src', response.densityMap).show();
+                        $('#peopleCount').text('Estimated Count: ' + response.count);
+                    },
+                    error: function(xhr) {
+                        clearInterval(loadingInterval); // Stop the loading message
+                        $('#loadingMessage').text('Failed to count.');  // Update to show error message
+                        alert('Error uploading image: ' + xhr.responseText);
+                    }
+                });
+            });
+        });
+        </script>
+        
+        
+        
+        
+</body>
+</html>

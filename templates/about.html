@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>About</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Data</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Counter</a></li>
+          <li><a href="{{ url_for('data') }}">Data</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          <li><a href="{{ url_for('about_me') }}">About me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Valg af model</h2>
+      <div class="content">
+        <section class="test-box">
+          <p>
+            En tabel med hvordan sterer performer på egen data, og data på DM
+            count og det samme for DM count.
+          </p>
+        </section>
+        <section class="about-image">
+          <img src="{{ url_for('static', filename='images/models_on_different_datasets.png') }}" alt="Dataset Models">
+        </section>
+
+        <table>
+          <thead>
+            <h3>Trænet på almindelige billeder</h3>
+            <tr>
+              <th>Testbetingelse</th>
+              <th>MAE</th>
+              <th>MSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Almindeligt testsæt</td>
+              <td>118.905</td>
+              <td>195.578</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 5</td>
+              <td>143.644</td>
+              <td>253.582</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 11</td>
+              <td>238.725</td>
+              <td>409.483</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 15</td>
+              <td>308.011</td>
+              <td>515.122</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <h3>Trænet på blurred billeder med kernel size 5</h3>
+            <tr>
+              <th>Testbetingelse</th>
+              <th>MAE</th>
+              <th>MSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Almindeligt testsæt</td>
+              <td>171.175</td>
+              <td>352.513</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 5</td>
+              <td>106.836</td>
+              <td>194.852</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 11</td>
+              <td>144.598</td>
+              <td>274.408</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 15</td>
+              <td>188.096</td>
+              <td>351.712</td>
+            </tr>
+            <tr>
+              <td>Almindelig og blurred, Kernel size 5</td>
+              <td>139.005</td>
+              <td>284.810</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <h3>Trænet på almindeligt datasæt og blurred med kernel size 5</h3>
+            <tr>
+              <th>Testbetingelse</th>
+              <th>MAE</th>
+              <th>MSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Almindeligt testsæt</td>
+              <td>104.820</td>
+              <td>176.040</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 5</td>
+              <td>108.705</td>
+              <td>189.314</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 11</td>
+              <td>139.117</td>
+              <td>242.645</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 15</td>
+              <td>190.378</td>
+              <td>339.605</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <h3>Trænet på downsampled datasæt formindsket 50%</h3>
+            <tr>
+              <th>Testbetingelse</th>
+              <th>MAE</th>
+              <th>MSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Almindeligt testsæt</td>
+              <td>485.169</td>
+              <td>763.729</td>
+            </tr>
+            <tr>
+              <td>Downsamplede billeder</td>
+              <td>143.330</td>
+              <td>256.751</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 5</td>
+              <td>463.838</td>
+              <td>739.695</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 11</td>
+              <td>458.348</td>
+              <td>739.373</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 15</td>
+              <td>476.777</td>
+              <td>168.145</td>
+            </tr>
+            <tr>
+              <td>Almindelig og blurred, Kernel size 5</td>
+              <td>139.005</td>
+              <td>284.810</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <h3>
+              Trænet på normale billeder downsampled datasæt formindsket 50%
+            </h3>
+            <tr>
+              <th>Testbetingelse</th>
+              <th>MAE</th>
+              <th>MSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Almindeligt testsæt</td>
+              <td>264.330</td>
+              <td>438.926</td>
+            </tr>
+            <tr>
+              <td>Downsamplede billeder</td>
+              <td>164.643</td>
+              <td>256.577</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 5</td>
+              <td>371.886</td>
+              <td>599.678</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 11</td>
+              <td>419.567</td>
+              <td>672.213</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 15</td>
+              <td>453.909</td>
+              <td>717.823</td>
+            </tr>
+            <tr>
+              <td>Almindelig og blurred, Kernel size 5</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <h3>
+              Trænet på blurred downsamplede billeder (kernel 5 ogformindsket
+              50%)
+            </h3>
+            <tr>
+              <th>Testbetingelse</th>
+              <th>MAE</th>
+              <th>MSE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Almindeligt testsæt</td>
+              <td>264.330</td>
+              <td>438.926</td>
+            </tr>
+            <tr>
+              <td>Downsamplede billeder</td>
+              <td>164.643</td>
+              <td>256.577</td>
+            </tr>
+            <tr>
+              <td>Downsamplede og blurred</td>
+              <td>135.448</td>
+              <td>226.516</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 5</td>
+              <td>371.886</td>
+              <td>599.678</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 11</td>
+              <td>419.567</td>
+              <td>672.213</td>
+            </tr>
+            <tr>
+              <td>Blurred, Kernel size 15</td>
+              <td>453.909</td>
+              <td>717.823</td>
+            </tr>
+            <tr>
+              <td>Almindelig og blurred, Kernel size 5</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <section class="epocs">
+          <h2>Epocs Size</h2>
+          <table>
+            <thead>
+              <h3>DM count</h3>
+              <tr>
+                <th>Model</th>
+                <th>Antal Epoker</th>
+                <th>MAE</th>
+                <th>MSE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DM Count</td>
+                <td>1000</td>
+                <td>85.6</td>
+                <td>148.3</td>
+              </tr>
+              <tr>
+                <td>DM Count</td>
+                <td>100</td>
+                <td>96.360</td>
+                <td>158.517</td>
+              </tr>
+              <tr>
+                <td>DM Count</td>
+                <td>50</td>
+                <td>111.383</td>
+                <td>185.289</td>
+              </tr>
+              <tr>
+                <td>DM Count</td>
+                <td>25</td>
+                <td>101.960</td>
+                <td>176.391</td>
+              </tr>
+              <tr>
+                <td>DM Count</td>
+                <td>10</td>
+                <td>97.160</td>
+                <td>170.725</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div class="graph">
+          <img src="{{ url_for('static', filename='images/epochs_model_preformance.png') }}" alt="Performance Graph">
+        </div>
+      </div>
+    </main>
+    <!-- Footer Section -->
+    <footer id="footer">
+      <p>&copy; 2024 People Counter</p>
+      <p>Follow us on social media for more laughs and updates:</p>
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.instagram.com/p/BYPLMqiHIO5/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/photo.php?fbid=2336423300166&set=pb.1537352171.-2207520000&type=3"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/photo.php?fbid=2336423300166&set=pb.1537352171.-2207520000&type=3"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a href="danny.html"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="danny.html"><i class="fab fa-twitch"></i></a>
+        </li>
+        <li>
+          <a href="danny.html"><i class="fab fa-discord"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

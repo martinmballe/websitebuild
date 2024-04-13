@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <title>People counting</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="danbod">
+  <header>
+    <h1>About me!</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Counter</a></li>
+        <li><a href="{{ url_for('data') }}">Data</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('about_me') }}">About me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>A little about me XD</h2>
+    <section>
+      <div class="danimg">
+        <img src="{{ url_for('static', filename='images/danny.png') }}" alt="Performance Graph">
+      </div>
+    </section>
+    <article>
+      <p>
+        Hi guys! My name is daniel and damn! im back at it again with white vans!!!!
+      </p>
+      <p id="aboutContent"></p>
+      <p>A little bit of Monica in my life, a little bit of chandlers by my side. A little bit rachels all I need. A little bit of phoebe  what I see. A little bit of Joey in the sun. A little bit of Ro-os all night long. A little bit Gunther, here I am. A little bit of you makes me your man. 📝🎺📝🎺
+      </p>
+    </article>
+    <section class="danimg2">
+      <img src="{{ url_for('static', filename='images/danny2.png') }}" alt="Performance Graph">
+
+    </section>
+    <article>
+      <p>This is how I look when I'm really focused while coding</p>
+    </article>
+  </main>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 People Counter</p>
+    <p>Follow us on social media for more laughs and updates:</p>
+    <ul class="social-icons">
+      <li>
+        <a href="https://www.instagram.com/p/BYPLMqiHIO5/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/photo.php?fbid=2336423300166&set=pb.1537352171.-2207520000&type=3"
+          ><i class="fab fa-facebook"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.facebook.com/photo.php?fbid=2336423300166&set=pb.1537352171.-2207520000&type=3"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </li>
+      <li>
+        <a href="danny.html"><i class="fab fa-linkedin"></i></a>
+      </li>
+      <li>
+        <a href="danny.html"><i class="fab fa-twitch"></i></a>
+      </li>
+      <li>
+        <a href="danny.html"><i class="fab fa-discord"></i></a>
+      </li>
+    </ul>
+  </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('/static/about_context.txt')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('aboutContent').innerHTML = text;
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+  });
+  </script>
+</body>
+</html>

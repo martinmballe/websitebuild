@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Counter</a></li>
+                <li><a href="{{ url_for('data') }}">Data</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('about_me') }}">About me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Content here -->
+        <section class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.0064207311325!2d12.590016499999999!3d55.6714885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533f1f9577d3%3A0x271f4b5fb224387d!2sSofieg%C3%A5rdens%20Kollegium!5e0!3m2!1sen!2sdk!4v1712865892861!5m2!1sen!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <!-- More content -->
+    </main>
+    <section class="contact-us">
+      <div class="row">
+        <div class="contact-col">
+          <section class="contact-us grid_1-1-1">
+            <div>
+              <i class="fa fa-home"></i>
+              <h5>Sofiegården</h5>
+              <p>2300 København, Denmark</p>
+            </div>
+            <div>
+              <i class="fa fa-phone"></i>
+              <h5>+298 696969</h5>
+              <p>Monday from 1pm to 1:15pm</p>
+            </div>
+            <div>
+              <i class="fa fa-envelope-open"></i>
+              <h5>dannythepussydestroyer@gmail.com</h5>
+              <p>Email us your query</p>
+            </div>
+          </section>
+        </div>
+        <div class="contact-form">
+          <div class="contact-col">
+            <form action="form-handler.php" method="post">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter email address"
+                required
+              />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Enter your subject"
+                required
+              />
+              <textarea
+                rows="8"
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 People Counter</p>
+    </footer>
+</body>
+</html>
