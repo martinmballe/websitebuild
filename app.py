@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template, url_for
 from werkzeug.utils import secure_filename
 import os
-from count import process_image  # Make sure this import is correct
+
 
 app = Flask(__name__)
 app = Flask(__name__, static_folder='static')

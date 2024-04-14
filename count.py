@@ -1,5 +1,4 @@
 import torch
-from memory_profiler import profile
 import numpy as np
 import cv2
 from PIL import Image
@@ -52,6 +51,15 @@ def process_image(image_path, model_path, output_path=''):
     except Exception as e:
         print(f"Error processing image: {e}")
         return -1, None  # Returning -1 or any appropriate error indicator
+    finally:
+        if os.path.exists(image_path):
+            os.remove(image_path)
+            print(f"Deleted original image {image_path}")
+        if output_path and os.path.exists(output_path):
+            os.remove(output_path)
+            print(f"Deleted density map {output_path}")
+        
+
 if __name__ == '__main__':
     model_path = 'pretrained_models/best_model_7.pth'
     image_path = 'haps/example.jpg'  # Make sure to specify a valid image file
