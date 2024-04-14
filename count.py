@@ -47,6 +47,7 @@ def process_image(image_path, model_path, output_path=''):
             if not save_density_map(density_map, output_path):
                 raise Exception("Failed to save density map")
 
+
         return estimated_count, output_path
     except Exception as e:
         print(f"Error processing image: {e}")
