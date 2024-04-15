@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/users/martinballe/DM-Count-1/website/delete.py", line 22, in <module>
-    delete_old_files(upload_folder, max_file_age)
-  File "/users/martinballe/DM-Count-1/website/delete.py", line 6, in delete_old_files
-    for filename in os.listdir(directory):
-FileNotFoundError: [Errno 2] No such file or directory: 'uploads'
-Deleted /users/martinballe/DM-Count-1/website/uploads/test.txt
