@@ -73,7 +73,9 @@ def upload_file():
     except Exception as e:
         print(f"Error during upload: {str(e)}")
         return jsonify({'message': f"Server error: {str(e)}"}), 500
-
+@app.route('/health')
+def health_check():
+    return jsonify({"status": "OK"}), 200
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))  # Default port to 5000 if PORT not set
