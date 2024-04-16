@@ -4,7 +4,6 @@ import os
 from count import process_image  # Make sure this import is correct
 
 
-app = Flask(__name__)
 app = Flask(__name__, static_folder='static')
 
 
@@ -57,21 +56,25 @@ def upload_file():
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(filepath)
 
-        model_path = 'pretrained_models/best_model_7.pth'
-        output_path = os.path.join(app.config['STATIC_FOLDER'], 'density_' + filename)
+        model_path = 'pretrained_models/model_qnrf_1000e.pth'
+        output_path = os.path.join(app.config['STATIC_FOLDER'], 'density_maps', 'density_' + filename)
         estimated_count, density_map_path = process_image(filepath, model_path, output_path)
 
         if estimated_count == -1:
             return jsonify({'message': "Error processing image"}), 500
+        static_folder_path = app.config['STATIC_FOLDER']  # Assuming this returns the path to the static directory
+        relative_path = os.path.relpath(density_map_path, static_folder_path)  # Gets the relative path
+        density_map_url = url_for('static', filename=relative_path)
 
-        density_map_url = url_for('static', filename=os.path.basename(density_map_path))
+        
+        
         return jsonify({
             'message': "Image processed successfully",
             'count': float(estimated_count),
             'densityMap': density_map_url
         })
     except Exception as e:
-        print(f"Error during upload: {str(e)}")
+        logging.error(f"Error during upload: {str(e)}")
         return jsonify({'message': f"Server error: {str(e)}"}), 500
 @app.route('/health')
 def health_check():

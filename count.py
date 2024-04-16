@@ -14,8 +14,9 @@ def save_density_map(density_map, output_path):
         print(f"Density map saved to {output_path}")
         return True
     except Exception as e:
-        print(f"Error saving density map: {e}")
-        return False
+        logging.error(f"Error during upload: {str(e)}")
+        return jsonify({'message': f"Server error: {str(e)}"}), 500
+
 
 def process_image(image_path, model_path, output_path=''):
     try:
@@ -53,7 +54,7 @@ def process_image(image_path, model_path, output_path=''):
         print(f"Error processing image: {e}")
         return -1, None  # Returning -1 or any appropriate error indicator
 if __name__ == '__main__':
-    model_path = 'pretrained_models/best_model_7.pth'
+    model_path = 'pretrained_models/model_qnrf_1000e.pth'
     image_path = 'haps/example.jpg'  # Make sure to specify a valid image file
     output_path = 'static/density_example.jpg'  # Ensure this path is correct
     count, _ = process_image(image_path, model_path, output_path)
