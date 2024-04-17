@@ -1910,3 +1910,97 @@
 2024-04-17 12:26:01,092 INFO:Processed 0 files, deleted 0 files.
 2024-04-17 12:27:00,401 INFO:Processed 0 files, deleted 0 files.
 2024-04-17 12:27:00,421 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:28:00,710 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:28:00,711 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:29:00,995 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:29:00,997 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:30:00,258 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:30:00,259 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:31:00,610 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:31:00,612 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:32:00,930 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:32:00,931 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:33:01,354 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:33:01,358 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:34:00,649 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:34:00,650 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:35:00,904 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:35:00,905 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:36:01,208 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:36:01,209 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:37:00,431 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:37:00,432 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:38:00,706 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:38:00,707 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:39:00,961 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:39:00,961 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:40:01,242 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:40:01,243 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:41:00,539 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:41:00,540 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:42:00,782 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:42:00,783 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:43:01,091 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:43:01,092 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:44:00,421 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:44:00,422 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:45:00,643 INFO:Skipped /Users/martinballe/DM-Count-1/website/static/density_maps/density_anfield.png, not old enough.
+2024-04-17 12:45:00,645 INFO:Processed 1 files, deleted 0 files.
+2024-04-17 12:45:00,645 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:45:00,645 INFO:Processed 1 files, deleted 0 files.
+2024-04-17 12:46:00,859 INFO:Deleted /Users/martinballe/DM-Count-1/website/static/density_maps/density_anfield.png
+2024-04-17 12:46:00,859 INFO:Processed 1 files, deleted 1 files.
+2024-04-17 12:46:00,860 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:46:00,860 INFO:Processed 1 files, deleted 0 files.
+2024-04-17 12:47:01,040 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:47:01,041 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:47:01,041 INFO:Processed 1 files, deleted 0 files.
+2024-04-17 12:48:00,252 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:48:00,253 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:48:00,253 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:48:00,253 INFO:Processed 2 files, deleted 0 files.
+2024-04-17 12:49:00,488 INFO:Skipped /Users/martinballe/DM-Count-1/website/static/density_maps/density_1000.jpg.png, not old enough.
+2024-04-17 12:49:00,489 INFO:Processed 1 files, deleted 0 files.
+2024-04-17 12:49:00,489 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:49:00,489 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:49:00,489 INFO:Processed 2 files, deleted 0 files.
+2024-04-17 12:50:00,763 INFO:Deleted /Users/martinballe/DM-Count-1/website/static/density_maps/density_1000.jpg.png
+2024-04-17 12:50:00,764 INFO:Processed 1 files, deleted 1 files.
+2024-04-17 12:50:00,765 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:50:00,765 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:50:00,765 INFO:Processed 2 files, deleted 0 files.
+2024-04-17 12:51:01,134 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:51:01,135 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:51:01,135 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:51:01,135 INFO:Processed 2 files, deleted 0 files.
+2024-04-17 12:52:00,286 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:52:00,286 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:52:00,286 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:52:00,286 INFO:Processed 2 files, deleted 0 files.
+2024-04-17 12:53:00,478 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:53:00,478 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:53:00,479 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:53:00,479 INFO:Processed 2 files, deleted 0 files.
+2024-04-17 12:54:00,762 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:54:00,763 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:54:00,763 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/anfield.png, not old enough.
+2024-04-17 12:54:00,763 INFO:Processed 2 files, deleted 0 files.
+2024-04-17 12:55:00,942 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:55:00,942 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:55:00,943 INFO:Deleted /Users/martinballe/DM-Count-1/website/uploads/anfield.png
+2024-04-17 12:55:00,943 INFO:Processed 2 files, deleted 1 files.
+2024-04-17 12:56:01,201 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:56:01,202 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:56:01,202 INFO:Processed 1 files, deleted 0 files.
+2024-04-17 12:57:00,497 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:57:00,498 INFO:Skipped /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png, not old enough.
+2024-04-17 12:57:00,498 INFO:Processed 1 files, deleted 0 files.
+2024-04-17 12:58:00,723 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:58:00,724 INFO:Deleted /Users/martinballe/DM-Count-1/website/uploads/1000.jpg.png
+2024-04-17 12:58:00,724 INFO:Processed 1 files, deleted 1 files.
+2024-04-17 12:59:00,922 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 12:59:00,922 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 13:00:01,192 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 13:00:01,193 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 13:01:00,469 INFO:Processed 0 files, deleted 0 files.
+2024-04-17 13:01:00,469 INFO:Processed 0 files, deleted 0 files.
