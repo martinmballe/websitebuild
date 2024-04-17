@@ -44,6 +44,7 @@ def get_about_text():
         return "File not found.", 404
 
 
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     try:
@@ -58,27 +59,28 @@ def upload_file():
 
         model_path = 'pretrained_models/model_qnrf_1000e.pth'
         output_path = os.path.join(app.config['STATIC_FOLDER'], 'density_maps', 'density_' + filename)
+        
+        # Ensure the density_maps directory exists
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
         estimated_count, density_map_path = process_image(filepath, model_path, output_path)
 
         if estimated_count == -1:
             return jsonify({'message': "Error processing image"}), 500
-        static_folder_path = app.config['STATIC_FOLDER']  # Assuming this returns the path to the static directory
-        relative_path = os.path.relpath(density_map_path, static_folder_path)  # Gets the relative path
-        density_map_url = url_for('static', filename=relative_path)
 
+        if not os.path.exists(density_map_path):
+            return jsonify({'message': "Density map was not created"}), 500
         
-        
+        density_map_url = url_for('static', filename=os.path.join('density_maps', 'density_' + filename))
+
         return jsonify({
             'message': "Image processed successfully",
             'count': float(estimated_count),
             'densityMap': density_map_url
         })
     except Exception as e:
-        logging.error(f"Error during upload: {str(e)}")
         return jsonify({'message': f"Server error: {str(e)}"}), 500
-@app.route('/health')
-def health_check():
-    return jsonify({"status": "OK"}), 200
+
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))  # Default port to 5000 if PORT not set

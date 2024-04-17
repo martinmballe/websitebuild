@@ -4,6 +4,7 @@ import cv2
 from PIL import Image
 from torchvision import transforms
 from models import vgg19
+import logging
 
 def save_density_map(density_map, output_path):
     try:
@@ -15,12 +16,11 @@ def save_density_map(density_map, output_path):
         return True
     except Exception as e:
         logging.error(f"Error during upload: {str(e)}")
-        return jsonify({'message': f"Server error: {str(e)}"}), 500
-
+        return False
 
 def process_image(image_path, model_path, output_path=''):
     try:
-        device = torch.device('cpu')  # use 'cuda' for GPU
+        device = torch.device('cpu')  # Use CPU
 
         # Load the model
         model = vgg19()
@@ -48,14 +48,13 @@ def process_image(image_path, model_path, output_path=''):
             if not save_density_map(density_map, output_path):
                 raise Exception("Failed to save density map")
 
-
         return estimated_count, output_path
     except Exception as e:
-        print(f"Error processing image: {e}")
-        return -1, None  # Returning -1 or any appropriate error indicator
+        logging.error(f"Error processing image: {e}")
+        return -1, None
 if __name__ == '__main__':
     model_path = 'pretrained_models/model_qnrf_1000e.pth'
-    image_path = 'haps/example.jpg'  # Make sure to specify a valid image file
-    output_path = 'static/density_example.jpg'  # Ensure this path is correct
+    image_path = 'uploads/example.jpg'  # Make sure to specify a valid image file
+    output_path = 'static/density_maps/density_example.jpg'  # Ensure this path is correct
     count, _ = process_image(image_path, model_path, output_path)
     print(f"Estimated count: {count}")

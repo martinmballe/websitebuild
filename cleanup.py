@@ -29,4 +29,4 @@ if __name__ == '__main__':
     folder_to_clean_density_maps = '/Users/martinballe/DM-Count-1/website/static/density_maps'  # Absolute path
     folder_to_clean_uploads = '/Users/martinballe/DM-Count-1/website/uploads'  # Absolute path
     cleanup_folder(folder_to_clean_density_maps, 60)
-    cleanup_folder(folder_to_clean_uploads, 60)
+    cleanup_folder(folder_to_clean_uploads, 600)
